@@ -126,7 +126,10 @@ Ex Vy (!(y = x) -> A(x, y)) : Il existe un sommet que relié (par un arc) à tou
 	Pour I1 : Vrai
 	Pour I2 : Vrai 
 
-:
+Vx Vy (A(x, y) v !A(x, y)) : Pour tout couple de sommets ou bien le premier est relié au second ou bien il ne l'est pas 
+	c'est une toutologie donc c'est toujours vrai, la vértié de dépend pas de ses variables mais de sa forme
+
+
 
 
 
