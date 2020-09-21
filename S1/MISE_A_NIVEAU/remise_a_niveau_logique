@@ -1,0 +1,144 @@
+--- Remise à niveau en logique ---
+
+Des connecteurs : !, ^, v, ->, <->
+
+Un ensemble de variables booléennes P : p, q, r, s, ...
+
+Form := p € P | (!Form) | (Form ^ Form) | (Form v Form) | (Form -> Form) | (Form <-> Form)
+
+Tables de vérités :
+
+P	!P
+0	1
+
+
+p	q	p ^ q		p v q		p -> q		p <-> q
+0	0	  0		  0		  1		   1  
+0	1	  0		  1		  1		   0
+1	0	  0		  1		  0		   0
+1	1	  1 		  1		  1		   1
+
+formules toutologique (formules valide)
+
+ex :	p v (!p)
+	(p ^ q) -> (p ^ q)
+
+formules contradictoire (formules insatisfiable) 
+
+ex :	p ^ !p
+	!(p v  (!p))
+
+Exercice 1) 
+Variables booléennes :
+n	il neige
+g	il y a de la glace
+f	il fait froid 
+p	il pleut 
+
+1) Avoir de la neige et du froid est une condition suffisante pour avoir de la glace.
+
+(n ^ f) -> g | (!(n ^ f)) v g 
+
+(n ^ f) <-> g est fausse car avoir de la neige et du froid est un condition et non implique 
+
+2) Avoir de la neige et du froid est une condition necessaire pour avoir de la glace
+
+g -> (n ^ f)
+
+3) Ou bien il y a de la pluie ou il y a de la neige mais pas les deux en même temps
+
+!(n <-> p)
+
+4) Il neige seulement si il fait froid
+
+n -> f 
+
+5) il y a de la pluie si et seulement si il ne neige pas 
+
+p <-> !n 
+
+Exercice 2)
+Ecrire les formules F1, F2, F3, et F4 utilisant seulement ! et ç comme connecteurs et telles que
+
+LOGIQUE DES PREDICATS
+
+alphabet : 
+!, ^, v, ->, <->
+prenthèses 
+variables individuelles x1, x2, x3
+constantes : a, b, c
+symboles de prédicats 
+
+exemple :
+jean est gentil			g(j) 
+tout le monde est gentil 	pour tout x g(x)
+jean deteste louis 		il existe x tel que d(j , x)
+jean deteste quelqu'un 		d(j, l)
+
+contantes :
+j	jean
+l	luis
+Symboles de prédicats 
+g à 1 argument pou dire "est gentil"
+d à deux arguments pour dire "déteste"
+
+FORMULES ATOMIQUE 
+
+r(t1, ..., tn)
+où : r est un symbole de prédicat à n arguments, n >= 1 et t1, ...; tn sont des termes
+
+Exercice 4)
+Language : 2 symboles de prédicats (relation)
+= l'égalité ; doit d'écrire x = y à la place de =(x, y)
+Pas de constantes (les seuls termes sont les variables : x, y, v, z, ... )
+
+1) il existe au moins deux sommets distincts
+	Ex Ey  !(x = y)
+
+2) il n'y a jamais un arc entre un sommet et soit même ( dit autrement : il n'y a pas de ycle de longueur 1 )
+	pour tout x : !A(x, x)
+	!Ex A(x, x)
+	Les deux propositions sont logiquement équivalente
+
+Pour tout x F(x) est équivalent à !E x !F(x)
+
+3) il existe un cycle de longueur 3 
+	Ex Ey Ex [A(x, y) ^ A'(y, z) ^ A(z, x)]
+
+4) Il existe un cycle de longueur 3 contenant trois sommets distincts 
+	Ex Ey Ez [A(x, y) ^ A(y, z) ^ A(z, x) ^ !(x = y) ^ !(y = z) ^ !(z = x)]
+
+graphes non orientés : Ax Ay (A(x, y) -> A(y, x))
+
+Exercice 5)
+A(x, y) : il y a un arc qui part de x et arrive à y 
+I1 (grahe G1) : domaine = ensemble des sommets {1, 2, 3, 4, 5}
+		interpretation du symbole de prédiacat A = {<1,1>, <2,2>, <1,3>, <1,4>, <2,4>}
+
+I2 (graphe G2) : domaine : comme G1
+		 interprétation du symbole de prédicats A : {<1,2>, <1,3>, <1,4>, <4,1>}
+
+Ex Vy A(x, y) : Il existe un sommet qui est relié (par un arc) à tout sommet 
+	Pour I1 : Vrai (il suffit de prendre x = 1)
+	Pour I2 : Faux car 1 n'est pas relié avec lui même 
+
+Ex Vy (!(y = x) -> A(x, y)) : Il existe un sommet que relié (par un arc) à tout autre sommet
+	Pour I1 : Vrai
+	Pour I2 : Vrai 
+
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

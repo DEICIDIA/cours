@@ -1,0 +1,38 @@
+--- CM ALGORITHMIQUE REPARTIE ---
+
+Réseaux -> Graphs
+Graphs -> Noeud / Arrêtes 
+
+Chaque noeuds a sa propre mémoire (pas de mémoire partagé) 
+Chaque noeuds a sa propre horloge (pas fiable) 
+Chaque machine possède (ou pas) un identifiant unique
+
+Le noeud p connait qu'il a des liens de communications 
+Le noeud p peu numéroter ses liens (numéro de ports)
+Le noeud p connait les identifiants de ses voisins 
+
+Diametre du réseau -> plus grande distance entre deux sommets (par le plus court chemin)
+
+Tout les noeud calculent par rondes sychrones. Dans une ronde, chaque noeud exécute les étapes suivantes :
+	Effectuer les clalculs locaux 
+	Envoyer des messages à ces voisins
+	Recevoir des messages de ces voisins
+
+Si plusieurs messages en même temps ?
+	FIFO
+	On peut définir un traitement spécial
+
+Qu'est ce qu'un algorithme répartis ? 
+	Pas de "machine" au centre du mechanisme qui gère / coordonne les calculs.
+
+Les complexités en temps se multipli entre elles 
+
+Parmis toutes les executions possible d'un algorithmes distribué c'est l'execution qui maximisera le temps qui définiras la compexité temporelle du pire cas.
+
+Compléxité des algorithmes répartis :
+
+	nombre de messages échangés 
+	taille des messages (bits)
+	temps d'execution (tmps / rondes)
+	epace mémoire utilisé par chaque machine
+

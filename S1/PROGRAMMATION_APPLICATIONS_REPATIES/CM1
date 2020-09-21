@@ -1,0 +1,45 @@
+--- Systèmes et applications répartis ---
+
+Bachir Djafri : bachir.djafri@univ-evry.fr
+
+Définition : 
+Un système distribué est une collection de processus ou d'ordinateurs indépendants et coopératifs qui apparaissent à l'utilisateur comme un seul et unique système
+cohérent.
+
+L'inverse d'un système répartis est appelé un système monolithique 
+
+qu'est ce qui nous pousse à faire des systèmes distribué ?
+
+augementer la performance :
+	traitement parallèle de tâches 
+	tolérance aux panne
+	passage à l'échelle ...
+
+aplications intrasèquement répartis :
+	géographiquement, fonctionnellement
+
+sécurité :
+	des procédés
+	des données
+
+augmenter la réutilisation :
+	développement rapide 
+	faciliter l'évolution
+	faciliter la maintenance 
+
+Trois formes de distribution :
+
+physique :
+	multi-processeurs
+	réseaux 
+
+structurelle
+	prog. objet
+	prog. structuré
+	...
+
+fonctionnelle :
+	services web
+	décomposition en services indépendants (affichage, calcul, stockage de données, ...)
+
+

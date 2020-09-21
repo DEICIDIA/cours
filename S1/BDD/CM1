@@ -1,0 +1,25 @@
+--- CM1 BASE DE DONNEE AVANCE ---
+
+Cours en deux parties :
+	modèle semi-structuré (S.Cerrito)
+	NoSQL (Ph.Declerc)
+
+Limites du modèle relationnel 
+	On ne peut pas imbriquer des informations 
+	La structure du schéma est très rigide 
+
+Première forme normale (intrasèque au modèle relationnel) -> beaucoup de redondances (pas d'imbrication) 
+La rigidité viens du fait qu'il ait dans le modèle relationnel un nombre fixe de tables et qu'une table a un nombre fixe d'attributs
+
+XML -> semi structuré (grande flexibilité) -> peut être modélisé comme un graph (arbre) 
+HTML -> ne permet pas de structurer logiquement un contenu et defacto n'est pas adapté pour la gestion de bases de données
+
+Arbres ou Graphes ?
+
+les données sont organisé en arbres, mais des références produisent des graphes.
+On peut faire référence à un sommet déjà existant dans le graphe car on peut associer à un identificatuer à chaque élément.
+
+Pour identifier de façon unique -> ID -> déclaration dans le shéma du document XML
+Pour faire référence à un élément on utilise un attribut de type IDREF
+
+

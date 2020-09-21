@@ -1,0 +1,58 @@
+--- Prise de note cours magistal 1 --- 
+
+Première partie : algorithmes efficace 
+Deuxième partie : résoudre problèmes dificile (sans solution optimal)
+
+Objectifs :
+	maitriser les techniques du cours 
+	savoir appliquer ces techniques 
+	analyser et concevoir les algorithmes 
+
+PREMIERE PARTIE /
+
+Diviser pour régner :
+	diviser le probèm donné en sous problèmes (de même nature)
+	résoudre les sous problèmes
+	combiner les solution des sous-problèmes pour obtenir une solution du problème initial 
+
+Compter le nombre d'inversions:
+	input : un tableau T de taille n avec des entiers distinct
+	une inversion est un couple (i, j) t.q (i < j) et T[i] > T[j]
+	[6, 8, 4, 1, 3, 2, 9]
+	
+	Solution : Tri + Inversion 
+	Calcul de la complexité de l'algorithme pour un tableau de taille n
+	R(1) -> 1
+	R(n) -> 2.R(n/2) + O(n) 
+	
+	T(n) = a.T(n/b) + O(n^c)
+	
+		O(n^c) is a < b^c
+	T(n) =  O(n^c log(n)) si a = b^c
+		O(n log_b^a) si a > b ^c 
+	
+Problème :
+	Input : n points E R^2 
+	Output : la distance minimal entre 2 points 
+	Distance(P) avec P le tableau de points 
+	Si |P| = 1 alors retourner 0 
+	Si |P| = 2 alors retourner d(p1, p2)
+	
+	P1 = ensemble des points (x, y) avec x < x0
+	Q <- Tri(P) sur les x
+	P1 <- Q[1, ..., n/2]
+	P2 <- Q[n/2, ..., n]
+	d1 = distnce(P1)
+	d2 = distance(P2)
+	d3 = min{d1, d2}
+	R1 = {pEP1 |p.x - P1[n/2].x| <= d}
+	R2 = {pEp2 |p.x - P2[0].x| <= d}
+	R = R1 U R2
+	S = Tri(R) sur les y 
+	pour (i = 1) jusqu'a ce que (|S| - 30){
+		pour (j = 1) jusqu'a (i + 30){
+			si d(S[i], S[j]) < d alors : d <- d(S[i], S[j])
+		}
+	}
+
+	NEED APPRENDRE A CALCULER LA COMPLEXITEE D'UN ALGORITHME RECURSIF A PARTIR D'UN PSEUDO CODE 
