@@ -132,7 +132,20 @@ Vx Vy (A(x, y) v !A(x, y)) : Pour tout couple de sommets ou bien le premier est 
 Formules :
 	Satisfiable : elle peut être vraie (mais elle n'est pas forcement vraie pour toute interprétation)
 	Insatisfiable : elle est fausse pour toute interprétation (on dit aussi : c'st une contradiction)
-	Toutologie : vraie pour toute inérprétation :
+	Toutologie : vraie pour toute inérprétation 
+
+Exercice nouveau :
+
+On a un language avec :
+	3 symboles de prédicats : P à un argument 
+	1 constante : a		R à 2 arguments
+
+Pour chacune des fomrules suivantes dire si elle est :
+	satisfiable mais pas une toutologie 
+	toutologie 
+	contradictoire 
+
+
 
 
 
