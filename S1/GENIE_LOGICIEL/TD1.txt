@@ -1,0 +1,5 @@
+Adresse mail du chargé de TD : sebastien.morais@cea.fr
+
+Une le fait qu'une classe implémente une interface est une sorte de contrat stipulant le fait que la classe va utiliser toutes les méthodes de l'interfaces et que ces méthodes sont publique.
+
+

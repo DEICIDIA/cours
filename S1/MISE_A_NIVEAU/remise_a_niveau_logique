@@ -145,19 +145,9 @@ Pour chacune des fomrules suivantes dire si elle est :
 	toutologie 
 	contradictoire 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+il existe un chien méchant :
+	Ex (ch(x) ^ m(x))
+Tous les chiens sont méchants :
+	Vx (ch(x) -> m(x))
+Seuls les chiens sont méchants :
+	Vx (m(x) -> ch(x))
