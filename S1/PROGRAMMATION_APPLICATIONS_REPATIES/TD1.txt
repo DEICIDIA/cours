@@ -1,3 +1,24 @@
 mail chargé de TD : romain.campigototto@gmail.com
+MDP TD : M12020UEVE
 
 Exercice 1 :
+
+Les liens sont FIFO 
+
+
+a) ils se réveille après récéption d'un message 
+Un noaud réveillé par réception de message effectue d'abord un phase d'initialisation : il envoie en premier sa propre valeur avant de traiter les messages reçus.
+
+b) si un noeud reçoit la même valeur que sa val max il s'endore et le prog se termine 
+
+c) beaucoup trop 
+n^2
+
+d) l'algo ne finiras jamais ? dépend ce qui est perdu 
+Message perdu : le noeud dont c'est la valeurs ne termine jamais. Si c'est le max, un message gagnant peut se déclarer.
+
+e)  la condition d'arrêt est fucked up 
+
+Exercice 2 :
+
+
