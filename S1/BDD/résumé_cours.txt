@@ -1,0 +1,29 @@
+--- notes sur le cours de base de données avancé ---
+
+Trois type de structure de base de données :
+	navigationnelle : navigation par pointeurs en suivant des liens
+	relationnelle : recherche par contenu 
+	post-relationelle : base de données orienté objet (NoSql / NewSql / ...) 
+
+
+
+avantages XML :
+	lisibilité : il est facile de lire du code XML 
+	disponibilité : création facile
+	interopérabilité : lisible par n'importe quoi
+	extensibilité : de nouvelles balise peuvent être ajouté à souhait
+	intégrabilité : un document XML est utilisable par tout application pourvue d'un parser
+
+DTD XML (définition du type de document) :
+	le nom des éléments, leur contenu, le nombre de fois et l'ordre d'apparition
+	les attributs éventuels et leurs valeurs par défaut 
+	les noms des entités qui peuvent être utilisées 
+
+--- TDT1 ---
+
+
+cinema | id_cinema : Nom : Num_civ : Rue : MétroLePlusProche
+
+projection | id_cinema : NuméroSalle : TitreFilm
+
+    
