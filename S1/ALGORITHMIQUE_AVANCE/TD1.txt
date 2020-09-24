@@ -1,0 +1,11 @@
+--- TD1 diviser pour régner ---
+
+a) Element maximum 
+
+--> voir unimodal.py
+
+b) 
+
+c)
+
+
