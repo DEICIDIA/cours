@@ -1,4 +1,4 @@
-lst = [10, 40, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1] 
+lst = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 26, 25]
 
 def maximum(lst):
 
@@ -16,13 +16,13 @@ def maximum(lst):
 
     if left > mid > right:
         if (mid_point - 1) < 3:
-            return lst[:(mid_point)]
+            return lst[:mid_point], False
         left_sub_lst = lst[:mid_point]
         return maximum(left_sub_lst)
 
     if left < mid < right:
         if (len(lst) - (mid_point + 1)) < 3:
-            return lst[(mid_point):]
+            return lst[mid_point:], False
         right_sub_lst = lst[mid_point:]
         return maximum(right_sub_lst)
 
