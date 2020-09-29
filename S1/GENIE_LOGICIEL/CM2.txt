@@ -29,4 +29,11 @@ Couleur		FormeGeo O					+computeArea(area : float[out])
 	 
 Pour utiliser une bibliothèque de manière propre (ne pas avoir à la changer à chaque mise à jour pour qu'elle s'intègre bien dans mon code) :
 
+Le language objet permet :
+	l'encapsulation -> protéger l'accès aux données
+	
+définition du couplage :
+	le couplage est une mesure du degré auqeul un élément est lié à un autre, en connaît un autre ou a besoin de ses services.
+	le couplage est le 1er indicateur de modularité du code 
+
 
