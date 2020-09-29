@@ -1,0 +1,32 @@
+--- Prise de notes CM2 --- 
+
+On a : un carre / un triangle / un rond
+
+- couleur (bleu, rouge, vert) 
+- affichable 
+- déplacer(x : float, y : float)
+- aire 
+
+Comme tout nos objet on les fonctionnalité si dessus donc on implémente une interface :
+
+<<enum>>	<<abstract>>					BSpline GeomFree 2.3.4 (bibliothèque)
+Couleur		FormeGeo O					+computeArea(area : float[out])
++VERT  	<-----	+aire(): float {abs}				+display()
++BLEU		+deplacer(x : float, y : float) {abs}		+move(p : BPoint)
++ROUGE		+afficher() {abs}				+setColor(r : int, g : int, b : int)
+		+getCouleur(): Couleur 				+getColor() : int 
+		+setCouleur(c : Couleur)					
+		    							 ^
+		    ^							 |
+		    |							 |
+		 ___|________________________				 |
+		|      |      |		     |			         |
+		|      |      |		     |				 |
+	     carre   disque  triangle	  AdaptateurSpline ______________|
+					  +aire()
+					  +deplacer()
+					  +afficher()
+	 
+Pour utiliser une bibliothèque de manière propre (ne pas avoir à la changer à chaque mise à jour pour qu'elle s'intègre bien dans mon code) :
+
+
