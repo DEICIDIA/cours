@@ -1,0 +1,39 @@
+--- Prise de notes CM2 ---
+
+verification de la validité d'un document XML -> automate d'arbre, automate de graphs n'existe pas
+
+Qu'est ce qu'un automate d'arbre / de graphs ? 
+	Un automate d'arbre est une machine à états qui prend en entrée un arbre plutôt qu'une chaine de carac
+	
+Qu'est ce qu'un fichier XML-chema ?
+	C'est un document qui fixe le format d'autres documents XML il est composé de :
+		Types simple : (STRING, BOOL, INTEGER, ...)
+		Type complexes : On peut les créer à l'aide de constructeurs 
+
+Language de données XML -> XQUERY (language fonctionnel)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
