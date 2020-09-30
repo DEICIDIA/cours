@@ -1,0 +1,66 @@
+--- Prise de notes CM2 ---
+
+Qu'est ce qu'un réseaux faiblement sychrone ?
+	On peut donner une borne (temps max qu'un message met à transiter) 
+
+Qu'est ce qu'une horloge logique ? 
+
+
+Qu'est ce qu'un évenement en algorithme distribué ?
+	calculs interne 
+	emission de message 
+	reception de messages 
+
+Qu'est ce qu'un ordre causal ? 
+		
+Algorithme de lamport 
+
+Si e est un événement interne alors faire 
+	hi = hi + 1 et L(e) = hi
+
+Si e est l'envoie d'un message M alors faire 
+	hi = hi + 1 et L(e) = hi
+	on envoire le message M avec l'estampille L(e)
+	Envoyer (<M, hi>) 
+
+Si e est la réception d'un message Recevoir (<M, h>) alors faire 
+	hi = max(h, hi) + 1 et L(e) = h1
+
+
+P1 --- a1 --- b2 --- c3 --- d4 --- e5 --- f6 --- g11
+
+P2 --- h1 --- i2 --- j3 --- k4 --- w6 --- i7 --- m8 --- n9 --- o10 --- p11
+
+P3 --- q3 --- r4 --- v5 --- s8 --- t9 --- u10
+
+Horloges Vectorielles :
+
+chaque machine garde en mémoire un vecteur faisant état du réseaux 
+
+A retenir : 
+
+3 systèmes répartis 
+	sychrone
+	faiblement synchrone -> on peut faire de la sychronisation mais on en a pas beosin sur toute les taches
+				juste besoin de leurs ordres 
+	asynchrone  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
