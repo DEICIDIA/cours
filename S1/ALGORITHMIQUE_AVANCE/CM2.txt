@@ -1,0 +1,65 @@
+--- Algorithmes Glouton ---
+
+Un algorithme glouton est une procédure itérative dans laquelle à chaque fois, on prend une décision "naïve".
+	1) en général, il n'y à pas d'algo glouton pour un problème donné
+	2) si un problème admet un algo glouton, l'aglo est efficace en théorie et en pratique
+	
+Problème d'ordenancement des tâches
+
+Entrées :
+	Un ensemble de n tâches (temps d'éxecution pj)
+	chaque tâche a une lngueur pj >= 0 (durée de pj)
+	et un poind wj >= 0 (qui représente la priorité de la tache)
+
+étant donnée une éxecution des tâches, le temps de complétude d'une tache j, oté par Cj, est défini 
+	
+	Cj = Sigma(Pk)
+
+Thm :
+	Algorithme d'éxecuter les tâche dans l'ordre décroissant de wj / pj, retourne l'éxecution optimal
+
+Preuve du Thm:
+	argument d'écange -> voir sur internet 
+
+
+Code de Huffman 
+
+ASCII : 64 symboles -> 6 bits pour les encoder -> code à longueur fixée 
+
+Codes à longueur varié -> besoin d'un code préfixe 
+
+Entrée : 
+	Un ensemble de symboles S et les fréquences f[a] de symbole a appartenant à S 
+
+Sortie : 
+	Un codage de S qui optimise Sigma(longueur[a]*f[a])
+	avec longueur[a] étant la profondeur de l'arbre 
+
+Algo :
+	Tout les symboles doivent être une feuille de l'arbre 
+	On construit de façon itérative l'arbre
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
