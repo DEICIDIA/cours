@@ -21,4 +21,8 @@ e)  la condition d'arrêt est fucked up
 
 Exercice 2 :
 
+a) C'est le gagnant qui en recevant un mesage d'élection avec sa valeur qui démare la phase élu 
+
+l'algo termine lorsque le gagnant (noeud actif restant) reçoit à gauche et à droite sa propre valeurs.
+
 

@@ -1,0 +1,17 @@
+--- Prises de notes TD2 ---
+
+Initialisation(i) :
+	Etat(i) = actif 
+	min(i) = val(i)
+	voisins = N(i)
+Reveil spontané de i :
+	initailistation de i 
+	Evenvois <REVEIL> à N(i)
+	Si |voisin| = 1, aors envoi <ELECTION, min> à voisins
+	
+Perception de <REVEIL> envoyé par j :
+	si Etat i != actif 
+	initialisation de i
+	Evoi <REVEIL> à N(i)\j
+	si |voisins(i)| = 1 alors envoi <ELECTION, min > à voisins (i)
+
