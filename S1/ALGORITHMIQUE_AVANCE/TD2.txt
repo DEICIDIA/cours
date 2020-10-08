@@ -1,0 +1,78 @@
+--- Prise de notes TD2 ---
+ 
+Exercice 1:
+
+Alphabet = {A, B, C, D, E}	Fréquence = {0.16, 0.08, 0.35, 0.07, 0.34}
+	
+	
+	 _______|________
+	/		 \
+0.35 (C)		   0.65
+			  /     \
+                 0.34 (E)	  0.31
+				 /    \
+        	         0.16 (A)      0.15
+			  	      /    \
+			       0.08 (B)    0.07 (D)
+C = (0)
+E = (10)
+A = (110)
+B = (1110)
+D = (1111)
+
+((n * (n - 1)) / 2) + 1 
+
+Pire cas :
+
+freq[ai] = 1/2^i		1 <= i <= (n - 1)
+freq[an] = 1/2^(n - 1)		
+
+Exercice 2:
+
+FAUX -> (A = 0.4, B = 0.5, C = 0.1)
+
+VRAI -> Soit a l'élément de fréquence 0.5D'après l'algo de huffmann, l'arbre qui contient suelement l'élément a est le dernier arbre à fusioner
+(parce que si ce n'est pas le cas, alors il existe un autre élément de b de fréquence > freq[a] = 0.5, cela implique freq[a] = freq[b] > 1 contradiction).
+Comme a est le dernier élément à fusioner avec l'arbre la profondeur de a = 1 
+
+VRAI -> si freq < 1/3 alors il y a au moins 4 élément. Par contradiction, si freq[c] = freq[d] <= freq[a] alors 
+freq[a] + freq[b] + freq[c] + freq[d] <= freq[a] + freq[b] + freq[a] <= 3freq[a] < 3 * 1/3 = 1 (contradiction).
+Suppose q'il existe un élément encodé avec 1 bit. Donc, A reste tout seul jusqua'a avat la dernière itération.
+A reste toute seule depuis le début jusqu'au moment où il y a 4 arbre dans l'éxécution de l'algo.
+Soit A, T1, T2, T3, les 4 arbres à ce moent Si freq(A) est le plus petit ou 2 ème plus petit alors A sera fusioné tout de suite (la profondeur de A est >= 2)
+
+FAUX -> Exercice 1
+
+Exercice 3:
+
+ennoncé : Algorithme de Huffman retourne une solution optimale pour un alphabet E quelconque.
+
+Par induton (récurence) sur la taille de E.
+Cas de base |E| = 2, l'algo est optimal 
+      .	
+     / \
+0 (a)	1 (b)
+
+On suppose que l'énoncé est vrai si |E| = k 
+On va prouver que l'énoncé est vrai si |E| = k + 1
+
+Etape 1 :
+
+Pouver que l'algo de Huffman retourne une solution optimal parmis tous les abres dont a et b sont père ou soeur
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
