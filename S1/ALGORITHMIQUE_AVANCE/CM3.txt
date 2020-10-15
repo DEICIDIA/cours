@@ -1,5 +1,71 @@
 --- Programmation dynamique ---
 
+Problème : 
+	Etant donnée un graphe ligne G(V, E), dont chaque sommet i a un poid wi.
+	Un ensemble indépendant est un sous ensemble des sommets S c V, tel que, v E S, il n'existe pas (u, v) E M
+
+	1 - 3 - 4 - 6 - 5 - 10 
+
+	les ensembles {1, 4, 5} et {3, 10} sont des ensembles indépendant.
+	l'ensemble {1, 3, 6, 10} lui ne l'est pas.
+
+But :
+	Trouver un ensmeble indépendant de poids total maximal 
+
+Approche :
+	Gloutonne :
+		Trier les sommets et supposer w1 >= w2 >= ... >= wn
+		On prend tout les poids maximum si possible 
+		contre ex :
+			4 - 5 - 3 retourne {5} hors il existe {4, 3} 
+	Diviser pour régner :
+		Soit G1 et G2 les deux sous graphes de taille n/2 
+		S1 <- ens_max(G1)
+		S2 <- ens_max(G2)
+		combiner S1 et S2 et retourner une solution 
+		contre ex :
+			3 - 4 - 5 - 2
+	Programmation dynamique :
+
+			idée 1)
+
+			si n = 1 retourner w1
+			si n = 2 retourner max{w1, W2}
+			si n >= 3 :
+				a <- ind(n-2)
+				b <- ind(n-1)
+				retourner max{b, a + wn)
+
+			O(2^n) donc pas très interessant 	
+
+			idée 2)
+
+			entré : 
+				graphe
+			Initialement, S = tableau de taille n
+			S[1] = w1, S[2] = max {w1, w2}
+			for (k = 3) to n do :
+				S[k] <- max{s[k-1], S[k-2] + wk} 
+			return S[n]
+
+			O(n)
+			
+Pradigmes de la rogrammation dynamique : 
+	Identifier les sous-prblèmes à résoudre (même nature que le pb original)
+	Chercher comment déduire une solution pour le problème initial étant données les solutions des sous-ploblèmes
+	
+	Conseils :
+		Penser aux tableaux quand on fait une approche de programmation dynamique 
 
 
 
+
+
+
+
+
+
+
+
+
+	 
