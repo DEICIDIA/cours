@@ -1,0 +1,60 @@
+--- Prise de notes du CM3 --- 
+
+L'adaptateur 
+
+Problème : comment permettre la collaboraton d'intance dont les classes ont des intefaces incompatible ?
+
+Solution : Introduisez une classe qui convertit l'interface de la classe fournissant le service en une autre conforme à l'attende de la classe cliente 
+
+Coureur à pied 
+	courir 
+	s'arrêter 
+	nom
+	calculer vitesse  __ GPS
+			 |__ Montre 
+			 |__ Accéléromètre
+
+
+Club		    ------->	Coureur 				<<enum>>	
++ajouterLeCoureur   <-------	-nom : String 	--------------->	ModeCalcul 
+				+courir() 				+GPS
+				+stop()					+MONTRE
+				+setClub(c : Club)
+				+calculerVitesse() : float		+ACC
+				-calculMontre() : float
+				-calculAccel() : float 
+				-calculGPS() : float  		---------------->	if (mode = GPS)
+												calculGPS();
+											elif (mode = MONTRE)
+												claculMontre();
+											else 
+												calculAccel();
+	
+Eviter le else de fin car il part du principe que le nombre de façon de calculer la vitesse est immuable 
+
+La bonne façon de faire est de créer trois classes fille à coureur CoureurGPS / CoureurMontre / CoureurAcc et rendre la classe coureur abstraite 
+
+Problème : avec cete solution pour modifier un coureurGPS en coureurMontre il faut "tuer" le coureurGPS et le créer à nouveau en coureurMontre (statique)
+
+Solution : faire de la composition pour rendre le tout dynamique 
+
+On créer donc une interface StrategieCalculVitesse qui se fait implémenter par StratégieMontre / StratégieGPS / StratégieAcc
+
+Singleton : assurer qu'il existe une unique instance d'une classe 
+
+Protection de variations :
+	préférer la composition à l'héritage 
+	
+Principe d'ouverture / fermeture 
+
+
+
+
+
+
+
+
+
+
+
+
